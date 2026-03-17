@@ -1,17 +1,30 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>Rust Starfield</title>
         <style>
+            html,
             body {
                 margin: 0;
-                background: black;
+                padding: 0;
                 overflow: hidden;
+                background: black;
+                height: 100%;
+                width: 100%;
+            }
+            canvas {
+                display: block;
+                width: 100vw;
+                height: 100vh;
             }
         </style>
     </head>
     <body>
-        <script src="https://not-fl3.github.io/miniquad-samples/macroquad.js"></script>
+        <canvas id="glcanvas"></canvas>
+        <script src="macroquad.js"></script>
+        <script>
+            load("starfield.wasm");
+        </script>
     </body>
 </html>
