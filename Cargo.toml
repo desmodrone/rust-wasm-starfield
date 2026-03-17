@@ -5,6 +5,4 @@ edition = "2024"
 
 [dependencies]
 macroquad = "0.4"
-rand = { version = "0.8", features = ["small_rng"] }
-# Required for random seeding in a browser environment
-getrandom = { version = "0.2", features = ["js"] }
+rand = { version = "0.8", default-features = false, features = ["small_rng"] }
